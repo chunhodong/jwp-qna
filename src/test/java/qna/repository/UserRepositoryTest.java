@@ -1,6 +1,5 @@
 package qna.repository;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +16,6 @@ public class UserRepositoryTest {
 
     @Autowired
     UserRepository userRepository;
-
-    @BeforeEach
-    void setUp() {
-        userRepository.deleteAll();
-    }
 
     @Test
     @DisplayName("userId에 해당하는 user가 반환")

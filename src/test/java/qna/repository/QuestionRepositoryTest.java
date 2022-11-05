@@ -1,6 +1,5 @@
 package qna.repository;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,11 +20,6 @@ public class QuestionRepositoryTest {
 
     @Autowired
     QuestionRepository questionRepository;
-
-    @BeforeEach
-    void setUp() {
-        questionRepository.deleteAll();
-    }
 
     @Test
     @DisplayName("삭제상태가 false인 Question목록을 반환")

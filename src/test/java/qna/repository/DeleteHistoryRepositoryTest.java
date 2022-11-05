@@ -1,6 +1,5 @@
 package qna.repository;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,11 +18,6 @@ public class DeleteHistoryRepositoryTest {
 
     @Autowired
     DeleteHistoryRepository deleteHistoryRepository;
-
-    @BeforeEach
-    void setUp() {
-        deleteHistoryRepository.deleteAll();
-    }
 
     @Test
     @DisplayName("삭제이력을 저장한후에 인스턴스의 id가 반환")

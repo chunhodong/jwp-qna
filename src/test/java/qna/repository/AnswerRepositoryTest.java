@@ -1,10 +1,10 @@
 package qna.repository;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.test.annotation.Rollback;
 import qna.domain.Answer;
 
 import java.util.List;
@@ -16,15 +16,11 @@ import static qna.domain.AnswerTest.A1;
 import static qna.domain.AnswerTest.A2;
 
 @DataJpaTest
+@Rollback(value = false)
 public class AnswerRepositoryTest {
 
     @Autowired
     AnswerRepository answerRepository;
-
-    @BeforeEach
-    void setUp() {
-        answerRepository.deleteAll();
-    }
 
     @Test
     @DisplayName("questionId와 일치하고 삭제상태가 false인 Answer목록을 반환")

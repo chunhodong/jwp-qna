@@ -64,7 +64,7 @@ class QnaServiceTest {
         assertThatThrownBy(() -> qnaService.deleteQuestion(UserTest.SANJIGI, question.getId()))
                 .isInstanceOf(CannotDeleteException.class)
                 .hasMessageContaining("질문을 삭제할 권한이 없습니다.");
-        ;
+
     }
 
     @Test
